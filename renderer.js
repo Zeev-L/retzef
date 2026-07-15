@@ -35,8 +35,10 @@ function resumeTarget(t) { const s = t.lastSample; return (s && (s.url || s.app)
 function threadRow(t, isCurrent) {
   const row = el('div', 'row' + (isCurrent ? ' current' : ''));
 
-  const btn = el('button', 'open', 'פתח');
-  btn.onclick = () => window.retzef.resume(resumeTarget(t));
+  const targets = (t.targets || []).map(x => x.value);
+  const btn = el('button', 'open', targets.length > 1 ? `פתח · ${targets.length}` : 'פתח');
+  btn.title = targets.length > 1 ? 'פותח מחדש את כל צביר החלונות' : 'חזור לחוט';
+  btn.onclick = () => window.retzef.resumeCluster(targets.length ? targets : [resumeTarget(t)]);
 
   const main = el('div', 'row-main');
   const line1 = el('div', 'row-title');

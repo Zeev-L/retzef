@@ -91,6 +91,7 @@ ipcMain.handle('get-board', () => ({
   permOK, lastCapture, sampleCount: store.samples.length
 }));
 ipcMain.handle('resume', (_e, target) => { resume(target); return true; });
+ipcMain.handle('resume-cluster', (_e, targets) => { (targets || []).forEach(resume); return true; });
 ipcMain.on('quit', () => app.quit());
 
 // Phase 2: AI "next step" for the top threads, cached by thread signature so

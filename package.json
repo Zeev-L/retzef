@@ -1,6 +1,6 @@
 {
   "name": "retzef",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "רצף — a quiet menu-bar memory for people who switch a lot. Passively remembers what you were doing on each thread and gives you a clean glance back, plus a daily focus read. Local-only, no screenshots.",
   "main": "main.js",
   "author": "Zeev-L",
@@ -32,6 +32,7 @@
       "target": [
         "dmg"
       ],
+      "icon": "assets/icon.icns",
       "identity": null,
       "extendInfo": {
         "LSUIElement": true,
