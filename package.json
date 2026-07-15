@@ -31,7 +31,13 @@
       "category": "public.app-category.productivity",
       "target": [
         "dmg"
-      ]
+      ],
+      "identity": null,
+      "extendInfo": {
+        "LSUIElement": true,
+        "NSAppleEventsUsageDescription": "Retzef reads the active browser tab title/URL to remember what you were working on.",
+        "NSAccessibilityUsageDescription": "Retzef reads the frontmost window title to remember your work threads."
+      }
     }
   },
   "allowScripts": {
