@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="panel">
+    <header class="head">
+      <div class="brand">
+        <span class="dot"></span>
+        <h1>רצף</h1>
+      </div>
+      <div class="tabs">
+        <button class="tab active" data-tab="threads">חוטים</button>
+        <button class="tab" data-tab="focus">קשב</button>
+      </div>
+    </header>
+
+    <div id="banner" class="banner hidden"></div>
+
+    <main id="view-threads" class="view"></main>
+    <main id="view-focus" class="view hidden"></main>
+
+    <footer class="foot">
+      <span id="status" class="status"></span>
+      <button id="quit" class="linkbtn">יציאה</button>
+    </footer>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

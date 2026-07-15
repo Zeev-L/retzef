@@ -1,0 +1,41 @@
+{
+  "name": "retzef",
+  "version": "0.1.0",
+  "description": "רצף — a quiet menu-bar memory for people who switch a lot. Passively remembers what you were doing on each thread and gives you a clean glance back, plus a daily focus read. Local-only, no screenshots.",
+  "main": "main.js",
+  "author": "Zeev-L",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "capture-test": "node lib/capture-test.js",
+    "classify-test": "node lib/classify.test.js",
+    "dist": "electron-builder --mac"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.zeevl.retzef",
+    "productName": "Retzef",
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "renderer.js",
+      "styles.css",
+      "lib/**",
+      "assets/**"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        "dmg"
+      ]
+    }
+  },
+  "allowScripts": {
+    "electron@31.7.7": true,
+    "electron-builder@24.13.3": true
+  }
+}
